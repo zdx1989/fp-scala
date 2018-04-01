@@ -1,19 +1,11 @@
-package chp0
+package chp2
 
 import scala.annotation.tailrec
 
 /**
-  * Created by zhoudunxiong on 2018/2/16.
+  * Created by zhoudunxiong on 2018/4/1.
   */
-package object Chp00 {
-
-  def factorial(n: Int): Int = {
-    @tailrec
-    def loop(n: Int, acc: Int): Int =
-      if (n <= 0) acc
-      else loop(n - 1, acc * n)
-    loop(n, 1)
-  }
+object Chp2 {
 
   def fib(n: Int): Int = {
     @tailrec
@@ -41,5 +33,4 @@ package object Chp00 {
 
   def compose[A, B, C](f: B => C, g: A => B): A => C =
     a => f(g(a))
-
 }
